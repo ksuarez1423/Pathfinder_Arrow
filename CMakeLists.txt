@@ -7,3 +7,6 @@ find_package(ArrowDataset REQUIRED HINTS ${ARROW_CONFIG_PATH})
 
 add_executable(ingestion ingestion.cc)
 target_link_libraries(ingestion PRIVATE arrow_shared arrow_dataset_shared)
+
+add_executable(cr_guesser cr_guesser.cc)
+target_link_libraries(cr_guesser PRIVATE arrow_shared arrow_dataset_shared)
